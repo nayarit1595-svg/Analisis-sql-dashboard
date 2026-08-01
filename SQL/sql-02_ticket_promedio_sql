@@ -1,0 +1,6 @@
+SELECT 
+  status AS estado_pedido,
+  ROUND(AVG(sale_price), 2) AS ticket_promedio
+FROM `bigquery-public-data.thelook_ecommerce.order_items`
+GROUP BY status
+ORDER BY ticket_promedio DESC;
